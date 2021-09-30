@@ -1,0 +1,32 @@
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-4"></div>
+      <div class="col-4">
+        <h3 style="text-align: center">View Products</h3>
+
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Category</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let t of products[0]">
+              <td>{{ t.name }}</td>
+              <td>{{ t.price }}</td>
+              <td>{{ t.quantity }}</td>
+              <td>{{ t.category }}</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <a class="btn btn-primary" routerLink="/addProduct">Add Products</a>
+      </div>
+      <div class="col-4"></div>
+    </div>
+  </div>
+</body>

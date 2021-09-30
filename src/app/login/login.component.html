@@ -1,0 +1,44 @@
+<!-- <p>login works!</p> -->
+
+
+<body>
+    <div class="container-fluid">
+        
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-lg-4">
+                <div class="account mt-5 p-2 d-flex-justify-content-center">
+                    <h3 class="text-center text-white">Log In</h3>
+                    <div class="row mt-5">
+                       <form [formGroup]="loginForm">
+                            <div class="col">
+                                <div class="col-12 mt-3">
+                                    <input type="text" class="form-control" id="email" placeholder="Email"
+                                        name="email" formControlName="email" aria-label="Last name" />
+                                </div>
+                                <div *ngIf="(this.loginForm.get('email')?.touched||this.loginForm.get('email')?.dirty)&&this.loginForm.get('email')?.errors" class="text-danger">Invalid Email</div>
+        
+                                <div class="col-12 mt-4">
+                                    <input type="password" class="form-control" id="password" placeholder="Password" name="password"
+                                        formControlName="password" aria-label="Last name" />
+                                </div>
+                                <div *ngIf="(this.loginForm.get('password')?.touched||this.loginForm.get('password')?.dirty)&&this.loginForm.get('password')?.errors" class="text-danger">Invalid Password</div>
+        
+                                <div>
+                                    <div class="d-flex justify-content-center mt-5">
+                                        <button class="btn btn-primary" (click)="login()" >
+                                            Sign In
+                                        </button>
+                                        <a class="ms-3 btn btn-primary" routerLink="">Register</a>
+                                    </div>
+                                </div>
+                            </div>
+                       </form>
+    
+                    </div>
+                </div>
+                <div class="col-4"></div>
+            </div>
+        </div>
+    </div>
+</body>
