@@ -10,7 +10,7 @@ import { ServiceService } from '../services/data.service';
 })
 export class RegistrationComponent implements OnInit {
   registerForm = this.fb.group({
-    name: ['', [Validators.required, Validators.pattern('[a-zA-Z]*')]],
+    name: ['', [Validators.required, Validators.pattern('[a-zA-Z0-9]*')]],
     email: ['', [Validators.required, Validators.email]],
     password: ['', [Validators.required, Validators.pattern('[0-9a-z]*')]],
     place: ['', [Validators.required, Validators.pattern('[a-zA-Z]*')]],
